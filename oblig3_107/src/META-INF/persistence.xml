@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+    http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+    version="2.2">
+
+	<persistence-unit name="Oblig3PU" transaction-type="RESOURCE_LOCAL">
+	
+		<class>entiteter.Ansatt</class>
+        <class>entiteter.Prosjekt</class>
+        
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:postgresql://ider-database.westeurope.cloudapp.azure.com:5432/h599027" />
+			<property name="javax.persistence.jdbc.user" value="h599027" />
+			<property name="javax.persistence.jdbc.password" value="Teamgronn" />
+
+			<!-- Se https://wiki.eclipse.org/EclipseLink/Examples/JPA/Logging -->
+			<property name="eclipselink.logging.level" value="WARNING" />
+        </properties>
+	</persistence-unit>
+</persistence> 
